@@ -1,0 +1,17 @@
+name = "simulation"
+main = "src/index.tsx"
+compatibility_date = "2024-02-11"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "simulation"
+database_id = "7a38d7c9-9f13-4f57-a551-c6cf03e39931"
+
+[site]
+bucket = "./assets"
+
+[triggers]
+crons = ["0 * * * *"]
+
+[dev]
+ip = "0.0.0.0"

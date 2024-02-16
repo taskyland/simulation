@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+:root {
+  color-scheme: light;
+
+  &.dark {
+    color-scheme: dark;
+  }
+}
+
+a {
+  @apply text-sky-200 decoration-dashed hover:decoration-solid focus:decoration-solid;
+}
+
+body {
+  @apply min-h-screen bg-neutral-300 dark:bg-neutral-900 focus:outline-none;
+}

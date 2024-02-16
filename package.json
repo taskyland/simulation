@@ -1,0 +1,28 @@
+{
+  "name": "simulation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "db:insights": "wrangler d1 insights simulation",
+    "db:migrate:local": "wrangler d1 migrations apply --local simulation",
+    "db:migrate:prod": "wrangler d1 migrations apply simulation",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "postinstall": "wrangler types && lefthook install",
+    "tail": "wrangler tail",
+    "typecheck": "wrangler types && tsc"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "d1-sql-tag": "^0.3.0",
+    "hono": "^3.11.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "lefthook": "^1.6.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.28.1"
+  }
+}
