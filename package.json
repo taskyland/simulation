@@ -8,8 +8,12 @@
     "db:migrate:prod": "wrangler d1 migrations apply simulation",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
+    "dev:css": "tailwindcss build -i src/styles.css -o assets/built.css -w",
+    "build": "tailwindcss build -i src/styles.css -o assets/built.css",
     "postinstall": "wrangler types && lefthook install",
-    "tail": "wrangler tail",
+    "format": "biome format --write .",
+    "lint": "biome lint --apply .",
+    "check": "biome check --apply .",
     "typecheck": "wrangler types && tsc"
   },
   "dependencies": {
