@@ -45,12 +45,11 @@ export async function StatusPage({
 				<meta property="og:type" content="website" />
 				<meta name="theme-color" content="#9EB1FF" />
 				<link rel="stylesheet" href="/built.css" />
-				<script src="/theme.js" />
 			</head>
 
 			<body>
 				<main>
-					<div class="flex flex-col w-full p-4 md:p-6">
+					<div class="flex flex-col w-full p-4 md:p-6 text-neutral-300">
 						<header class="flex items-center h-16 mb-6">
 							<h1 class="text-2xl font-bold">simulation 🛸</h1>
 						</header>
@@ -64,7 +63,7 @@ export async function StatusPage({
 							<Logs logLines={logLines} timezone={timezone} />
 						</div>
 					</div>
-					<footer class="mt-4 w-full max-w-2xl p-4 text-center text-stone-800 dark:text-stone-400">
+					<footer class="mt-4 w-full max-w-2xl p-4 text-center text-stone-400">
 						<div class="flex justify-center space-x-2">
 							<a href="https://github.com/fmhy/simulation" class="px-2">
 								source
@@ -72,15 +71,6 @@ export async function StatusPage({
 							<span>•</span>
 							<a href="https://discord.gg/Stz6y6NgNg" class="px-2">
 								discord
-							</a>
-							<span>•</span>
-							<a
-								// biome-ignore lint: don't care
-								onClick="window.toggleColorScheme()"
-								type="button"
-								class="px-2"
-							>
-								theme
 							</a>
 							{enableExecuteAllProbes && (
 								<>

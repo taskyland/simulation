@@ -17,18 +17,10 @@
   }
 }
 
-:root {
-  color-scheme: light;
-
-  &.dark {
-    color-scheme: dark;
-  }
-}
-
 a {
-  @apply text-sky-200 decoration-dashed hover:decoration-solid focus:decoration-solid;
+  @apply text-brand decoration-dashed hover:decoration-solid focus:decoration-solid;
 }
 
 body {
-  @apply min-h-screen bg-neutral-300 dark:bg-neutral-900 focus:outline-none;
+  @apply min-h-screen bg-neutral-900 focus:outline-none;
 }
