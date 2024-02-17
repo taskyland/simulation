@@ -28,6 +28,20 @@ export const probeConfigs: ProbeConfig[] = [
 		execute: (context) => probeHttp(context, 'https://whoogle.fmhy.net')
 	},
 	{
+		id: 'survival',
+		title: 'Dynmap (Survival)',
+		url: 'https://survival.dynmap.fmhy.net',
+		matchCron: (cron) => cron === cronHourly,
+		execute: (context) => probeHttp(context, 'https://survival.dynmap.fmhy.net')
+	},
+	{
+		id: 'modded',
+		title: 'Dynmap (Modded)',
+		url: 'https://modded.dynmap.fmhy.net',
+		matchCron: (cron) => cron === cronHourly,
+		execute: (context) => probeHttp(context, 'https://modded.dynmap.fmhy.net')
+	},
+	{
 		id: 'api',
 		title: 'API',
 		matchCron: (cron) => cron === cronHourly,
