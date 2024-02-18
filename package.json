@@ -8,8 +8,8 @@
     "db:migrate:prod": "wrangler d1 migrations apply simulation",
     "deploy": "wrangler deploy --minify",
     "dev": "wrangler dev",
-    "dev:css": "tailwindcss build -i src/styles.css -o assets/built.css -w",
-    "build": "tailwindcss build -i src/styles.css -o assets/built.css --minify",
+    "dev:css": "tailwindcss build -i src/styles.scss -o assets/built.css -w",
+    "build": "tailwindcss build -i src/styles.scss -o assets/built.css --minify",
     "postinstall": "wrangler types && lefthook install",
     "format": "biome format --write .",
     "lint": "biome lint --apply .",
@@ -24,9 +24,11 @@
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
     "@cloudflare/workers-types": "^4.20240208.0",
+    "@radix-ui/colors": "^0.1.9",
+    "@tailwindcss/typography": "^0.5.10",
     "lefthook": "^1.6.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "wrangler": "^3.28.1"
+    "wrangler": "^3.28.3"
   }
 }

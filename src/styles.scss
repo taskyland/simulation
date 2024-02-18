@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   ::before,
   ::after {
@@ -17,10 +16,18 @@
   }
 }
 
+:root {
+  color-scheme: light;
+
+  &.dark {
+    color-scheme: dark;
+  }
+}
+
 a {
-  @apply text-brand decoration-dashed hover:decoration-solid focus:decoration-solid;
+  @apply text-sky-10 dark:text-sky-dark-10 decoration-dashed hover:decoration-solid focus:decoration-solid;
 }
 
 body {
-  @apply min-h-screen bg-neutral-900 focus:outline-none;
+  @apply min-h-screen font-sans antialiased bg-neutral-1 dark:bg-neutral-dark-1 focus:outline-none max-w-none;
 }

@@ -47,7 +47,7 @@ export function ProbeCard({
 	}
 
 	return (
-		<div class="flex flex-col border border-neutral-600 rounded-lg p-4 bg-neutral-800">
+		<div class="flex flex-col border border-neutral-dark-10 dark:border-neutral-10 rounded-lg p-4 bg-neutral-3 text-neutral-12 dark:bg-neutral-dark-3 dark:text-neutral-dark-12">
 			<h2 class="text-lg font-semibold mb-2">
 				{probeConfig.url ? (
 					<a class="underline underline-offset-4" href={probeConfig.url}>
@@ -61,7 +61,9 @@ export function ProbeCard({
 				<span class={clsx('inline-flex w-3 h-3 rounded-full', statusColor)} />
 				<span>{statusText}</span>
 			</div>
-			<p class="text-sm text-neutral-500 mt-2">{statusDesc}</p>
+			<p class="text-sm text-neutral-11 dark:text-neutral-dark-11 mt-2">
+				{statusDesc}
+			</p>
 		</div>
 	)
 }

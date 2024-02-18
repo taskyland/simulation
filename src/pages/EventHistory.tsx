@@ -22,11 +22,11 @@ export function EventHistory({
 
 	return (
 		<>
-			<section class="border border-neutral-600 rounded-lg p-4 bg-neutral-800">
+			<section class="border border-neutral-dark-10 dark:border-neutral-10 rounded-lg p-4 bg-neutral-3 text-neutral-12 dark:bg-neutral-dark-3 dark:text-neutral-dark-12">
 				<h2 class="text-lg font-semibold mb-4">Recent</h2>
 				{Object.entries(groups).map(([date, groupEvents]) => (
 					<>
-						<h1 class="text-lg font-medium text-neutral-50">{date}</h1>
+						<h1 class="text-lg font-medium underline">{date}</h1>
 						{groupEvents.map((event) => {
 							const source = event.probeId
 								? probeConfigs.find((it) => it.id === event.probeId)
@@ -34,7 +34,7 @@ export function EventHistory({
 							return (
 								<div class="py-2">
 									<h3 class="text-sm font-medium">{source?.title}</h3>
-									<p class="text-sm text-neutral-500 mt-1">
+									<p class="text-sm text-neutral-11 dark:text-neutral-dark-11 mt-1">
 										{event.description
 											? event.description
 											: undefined || event.result === 'success'
